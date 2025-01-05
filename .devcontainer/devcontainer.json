@@ -1,0 +1,20 @@
+{
+  "name": "Debian in Browser",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y qemu-system x11-apps",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "dtsvet.vscode-wasm",
+        "eamodio.gitlens"
+      ]
+    }
+  }
+}
+
